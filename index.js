@@ -47,7 +47,7 @@ app.route("/api/guzelsoz/:id")
       });
     })
     .patch(function(req, res){
-      GuzelSoz.update({_id : req.params.id} , {$set : req.body}, function(err){
+      GuzelSoz.update({_id : req.params.id} , {$set : req.body}, function(err){  //...
         if(!err)
           res.send("Kayıt başarıyla güncellendi.");
         else
